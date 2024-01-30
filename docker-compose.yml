@@ -1,0 +1,6 @@
+version: '3'
+services:
+  webapp:
+    image: ghcr.io/iangalmiche4/imgaws:prod
+    ports:
+      - "3000:3000"
