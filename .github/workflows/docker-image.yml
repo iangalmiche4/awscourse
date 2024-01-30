@@ -14,10 +14,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker image
-      run: docker build -t iangalmiche4/my-docker-image:latest .
+      run: docker build -t iangalmiche4/myimage:latest .
       
     - name: Login to GitHub Container Registry
       run: docker login ghcr.io -u iangalmiche4 -p ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push Docker image to GitHub Container Registry
-      run: docker push ghcr.io/iangalmiche4/my-docker-image:latest
+      run: docker push ghcr.io/iangalmiche4/myimage:latest
